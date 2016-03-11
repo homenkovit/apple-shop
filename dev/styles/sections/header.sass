@@ -1,0 +1,41 @@
+.header
+	background: linear-gradient(to right,  #dae5f0 0%,#f0f4f9 30%,#f0f4f9 70%,#dae5f0 100%)
+	@extend .electra_light
+	min-height: 120px
+	
+	&__logo
+		position: absolute
+		top: 23px
+		left: 0
+		&-title
+			position: absolute
+			top: 0
+			left: -9999px
+
+	&__phone
+		position: absolute
+		top: 25px
+		right: 0
+		&-link
+			text-decoration: none
+		&-code
+			@extend .electra_bold
+			margin-right: 4px
+			font-size: 15px
+			color: $link-color
+		&-number
+			font-size: 25px
+			color: $text-color
+
+	&__mail
+		position: absolute
+		top: 55px
+		right: 0
+		font-size: 17px
+		color: $link-color
+		text-decoration: none
+		&:hover
+			color: $active-color
+			text-decoration: underline
+
+

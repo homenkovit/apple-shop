@@ -1,0 +1,38 @@
+footer.footer
+	.container
+		a.footer__logo(href="#")
+			img.footer__logo-img(src="./img/logo/main_logo-footer.png")
+			p.footer__logo-title AppleShop
+		
+		nav.footer__nav
+			ul.footer__nav-list
+				li.footer__nav-item
+					h3.footer__nav-title О магазине
+					each link in ['О нас', 'Наши цены', 'Наши скидки', 'Акции']
+						ul.footer__nav-list
+							li.footer__nav-item
+								a.footer__nav-link(href="javascript:void(0)")= link
+				li.footer__nav-item
+					h3.footer__nav-title Каталог
+					each link in ['Смартфоны', 'Планшеты', 'Компьютеры', 'Аксессуары']
+						ul.footer__nav-list
+							li.footer__nav-item
+								a.footer__nav-link(href="javascript:void(0)")= link
+				li.footer__nav-item
+					h3.footer__nav-title Контакты
+					each link in ['Телефоны', 'Адреса', 'Карта проезда', 'ОБратная связь']
+						ul.footer__nav-list
+							li.footer__nav-item
+								a.footer__nav-link(href="javascript:void(0)")= link
+
+		.footer__social
+			.footer__social-shops
+				a.footer__social-shops_appstore
+				a.footer__social-shops_googlestore
+			ul.footer__social-list
+				li.footer__social-item
+					a.footer__social-link.footer__social-link_vk(href="javascript:void(0)")
+				li.footer__social-item
+					a.footer__social-link.footer__social-link_fb(href="javascript:void(0)")
+				li.footer__social-item
+					a.footer__social-link.footer__social-link_tw(href="javascript:void(0)")

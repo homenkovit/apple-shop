@@ -1,0 +1,22 @@
+{
+  "name": "V-project",
+  "version": "0.1.0",
+  "description": "blank start template with jade/sass/gulp",
+  "devDependencies": {
+    "browser-sync": "^2.11.1",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-imagemin": "^2.4.0",
+    "gulp-jade": "^1.1.0",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-sass": "^2.2.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglifyjs": "^0.6.2",
+    "imagemin-pngquant": "^4.2.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/homenkovit/start-template.git"
+  }
+}
