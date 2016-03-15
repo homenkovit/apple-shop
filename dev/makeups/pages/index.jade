@@ -5,50 +5,48 @@ block title
 
 block content
 
-	section.options
-		.container
-			.options__breadcrumbs
-				ul.breadcrumbs__list
-					each title in ['Главная', 'Каталог']
+	section.main
+		section.options
+			.container
+				.options__breadcrumbs
+					ul.breadcrumbs__list
 						li.breadcrumbs__item
-							a.breadcrumbs__link(href="javascript:void(0)")= title
-			select.options__select
-				option(value="cells") Сеткой
-				option(value="lines") Линиями
-			.options__paginator
-				ul.paginator__list
-					each page in ['1', '2', '3', '4', '5']
-						li.paginator__item
-							a.paginator__link(href="javascript:void(0)")= page
-				a.paginator__all(href="javascript:void(0)") Все
+							a.breadcrumbs__link(href="javascript:void(0)") Главная
+						li.breadcrumbs__item
+							a.breadcrumbs__link.breadcrumbs__active(href="javascript:void(0)") Каталог
+				.options__paginator
+					ul.paginator__list
+						each page in ['1', '2', '3', '4', '5', 'Все']
+							li.paginator__item
+								a.paginator__link(href="javascript:void(0)")= page
 
-	section.content
-		.container
-			aside.content__sidebar
-				ul.sidebar__list
-					each item in ['iPhone', 'iPad', 'iMac', 'Macbook', 'iPod', 'Другое']
-						li.sidebar__item
-							a.sidebar__link(href="javascript:void(0)")= item
-							ul.sidebar__inner
-								each inner in ['iPhone 4s', 'iPhone 5', 'iPhone 5s с эксклюзивным дизайном', 'iPhone 6', 'iPhone 6 plus']
-									li.sidebar__inner-item
-										a.sidebar__inner-link(href="javascript:void(0)")= inner
+		section.content
+			.container
+				aside.content__sidebar
+					ul.sidebar__list
+						each item in ['iPhone', 'iPad', 'iMac', 'Macbook', 'iPod', 'Другое']
+							li.sidebar__item
+								a.sidebar__item-trigger(href="javascript:void(0)")= item
+								ul.sidebar__inner
+									each inner in ['iPhone 4s', 'iPhone 5', 'iPhone 5s с эксклюзивным дизайном', 'iPhone 6', 'iPhone 6 plus']
+										li.sidebar__inner-item
+											a.sidebar__inner-link(href="javascript:void(0)")= inner
 
-			.content__main
+				.content__main
 
-				each item, index in ['Apple Thunderbolt Display 27"', 'Apple iMac 27"', 'iPhone 5s Gold', 'iPad Air Wi-Fi + Cellular 128GB - Silver', 'Apple iPod nano 7G 16 ГБ Blue', 'Роутер Wi-Fi Apple AirPort Extreme Base Station']
-					ul.content__main-list.main__list_lines
-						li.content__main-item
-							a.content__main-link(href="javascript:void(0)")
-								img.link__img(src="./img/product/#{index + 1}.png")
-								.link__text
-									p.link__text-title= item
-									p.link__text-desc Артикул: 42787825, Опция: включена, Цвет: серебристый, Размер: 1280*1245*90, Вес: 9 кг
+					each item, index in ['Apple Thunderbolt Display 27"', 'Apple iMac 27"', 'iPhone 5s Gold', 'iPad Air Wi-Fi + Cellular 128GB - Silver', 'Apple iPod nano 7G 16 ГБ Blue', 'Роутер Wi-Fi Apple AirPort Extreme Base Station']
+						ul.content__main-list
+							li.content__main-item
+								a.content__main-link(href="javascript:void(0)")
+									img.link__img(src="./img/product/#{index + 1}.png")
+									.link__text
+										p.link__text-title= item
+										p.link__text-desc Артикул: 42787825, Опция: включена, Цвет: серебристый, Размер: 1280*1245*90, Вес: 9 кг
 
-				.content__about
-					h2.content__about-title Пара слов о магазине
-					p.content__about-text 
-						| Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad a, magnam odit sit molestiae libero quia in. Nihil quidem harum vitae sint laboriosam ullam ad. Aut non placeat odio sunt ullam unde repudiandae perferendis est possimus enim quia, inventore minus ab voluptas asperiores, autem natus officia ad vero temporibus. Quidem facilis, officia pariatur magnam eum unde minus voluptatibus non saepe eaque fuga cupiditate qui fugiat nam iure doloremque praesentium omnis ratione. Quod minus voluptas fuga placeat quae debitis excepturi amet voluptate veritatis laboriosam error distinctio provident porro aut dolorem ad suscipit unde, ullam rerum dolor quia. Necessitatibus voluptates voluptatum labore voluptas tempore, a eum distinctio repudiandae fugit in optio magni placeat corporis sint numquam delectus molestias modi illum magnam quibusdam iusto adipisci officia quam perspiciatis! Amet saepe a facere aliquam delectus, nesciunt veritatis nam enim accusantium tempore magnam ab maxime. Magni dolorem neque debitis optio velit ut ex id dolores repellendus assumenda alias veritatis quasi vel laudantium reiciendis, amet sequi veniam aliquid deserunt tempore accusantium nihil cumque voluptas perspiciatis. Quidem saepe provident, dolor. Debitis, quaerat corporis iure neque enim, doloremque nemo eveniet est accusamus commodi molestiae dolorum ut temporibus mollitia non, eum id a qui voluptatem similique! Dolores numquam, et?
+					.content__about
+						h2.content__about-title Пара слов о магазине
+						p.content__about-text 
+							| Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad a, magnam odit sit molestiae libero quia in. Nihil quidem harum vitae sint laboriosam ullam ad. Aut non placeat odio sunt ullam unde repudiandae perferendis est possimus enim quia, inventore minus ab voluptas asperiores, autem natus officia ad vero temporibus. Quidem facilis, officia pariatur magnam eum unde minus voluptatibus non saepe eaque fuga cupiditate qui fugiat nam iure doloremque praesentium omnis ratione. Quod minus voluptas fuga placeat quae debitis excepturi amet voluptate veritatis laboriosam error distinctio provident porro aut dolorem ad suscipit unde, ullam rerum dolor quia. Necessitatibus voluptates voluptatum labore voluptas tempore, a eum distinctio repudiandae fugit in optio magni placeat corporis sint numquam delectus molestias modi illum magnam quibusdam iusto adipisci officia quam perspiciatis! Amet saepe a facere aliquam delectus, nesciunt veritatis nam enim accusantium tempore magnam ab maxime. Magni dolorem neque debitis optio velit ut ex id dolores repellendus assumenda alias veritatis quasi vel laudantium reiciendis, amet sequi veniam aliquid deserunt tempore accusantium nihil cumque voluptas perspiciatis. Quidem saepe provident, dolor. Debitis, quaerat corporis iure neque enim, doloremque nemo eveniet est accusamus commodi molestiae dolorum ut temporibus mollitia non, eum id a qui voluptatem similique! Dolores numquam, et?
 
-					p.content__about-text
-						| Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus maxime harum voluptate, velit molestias sequi iure dignissimos recusandae enim reiciendis consectetur non, qui nesciunt. Nemo voluptatem voluptatibus porro hic. Earum voluptates laudantium, quo porro quisquam quasi saepe in cumque tenetur ipsa commodi inventore numquam amet est natus, ab explicabo. Quod omnis aut temporibus vero, voluptate optio assumenda eum, fuga, nisi corporis eveniet! Eligendi, fugit, quisquam. Iste dicta, earum inventore perspiciatis repellendus! Eveniet repudiandae voluptatum ad enim iure vitae, mollitia rem quaerat expedita, sit optio unde. Culpa facilis ipsa earum ipsam voluptatum itaque nulla commodi possimus illo, tempora corporis laborum excepturi amet ullam fugiat ea, quae dolorum quidem libero exercitationem ratione modi ex. Quae aliquid labore voluptates provident molestiae ipsum libero esse nemo sunt aut tempore, cumque illum alias ipsam, tenetur voluptatibus, excepturi reprehenderit. Optio architecto animi aliquam perspiciatis quo ipsa, illum explicabo necessitatibus dolor magnam repellendus dolore reiciendis est impedit corporis saepe, eveniet ipsum velit beatae non nostrum a vitae assumenda! Placeat similique provident vel eius nihil maxime quod rerum tempora, explicabo ipsum ea, dolor magnam corrupti aspernatur ullam nostrum ducimus dolore aliquid perspiciatis praesentium accusamus consequuntur modi temporibus laboriosam. Deleniti ducimus dolore aspernatur, itaque cum fugiat, eum temporibus minus!
+						p.content__about-text
+							| Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus maxime harum voluptate, velit molestias sequi iure dignissimos recusandae enim reiciendis consectetur non, qui nesciunt. Nemo voluptatem voluptatibus porro hic. Earum voluptates laudantium, quo porro quisquam quasi saepe in cumque tenetur ipsa commodi inventore numquam amet est natus, ab explicabo. Quod omnis aut temporibus vero, voluptate optio assumenda eum, fuga, nisi corporis eveniet! Eligendi, fugit, quisquam. Iste dicta, earum inventore perspiciatis repellendus! Eveniet repudiandae voluptatum ad enim iure vitae, mollitia rem quaerat expedita, sit optio unde. Culpa facilis ipsa earum ipsam voluptatum itaque nulla commodi possimus illo, tempora corporis laborum excepturi amet ullam fugiat ea, quae dolorum quidem libero exercitationem ratione modi ex. Quae aliquid labore voluptates provident molestiae ipsum libero esse nemo sunt aut tempore, cumque illum alias ipsam, tenetur voluptatibus, excepturi reprehenderit. Optio architecto animi aliquam perspiciatis quo ipsa, illum explicabo necessitatibus dolor magnam repellendus dolore reiciendis est impedit corporis saepe, eveniet ipsum velit beatae non nostrum a vitae assumenda! Placeat similique provident vel eius nihil maxime quod rerum tempora, explicabo ipsum ea, dolor magnam corrupti aspernatur ullam nostrum ducimus dolore aliquid perspiciatis praesentium accusamus consequuntur modi temporibus laboriosam. Deleniti ducimus dolore aspernatur, itaque cum fugiat, eum temporibus minus!

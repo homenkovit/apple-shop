@@ -1,0 +1,76 @@
+.nav
+	margin-top: -20px
+	margin-bottom: 24px
+	&__list
+		margin-left: 10px
+	&__item, &__link
+		display: inline-block
+	&__item
+		margin-left: 12px
+		&:first-child 
+			margin-left: 0
+	&__link
+		@extend .electra_light
+		position: relative
+		padding: 0 13px
+		height: 40px
+		line-height: 40px
+		font-size: 15px
+		text-decoration: none
+		color : $text-color
+		background: #f7f7f7
+		box-shadow: 0 2px 0 rgba(0, 0, 0, 0.15)
+		&:before 
+			position: absolute
+			top: 0
+			left: 0
+			content: ""
+			display: inline-block
+			border: 20px solid #f7f7f7
+			border-left: 10px solid transparent
+			border-right: 0
+			margin-left: -10px
+			box-shadow: 0 2px 0 rgba(0, 0, 0, 0.15)
+		&:after 
+			position: absolute
+			top: 0
+			right: 0
+			content: ""
+			display: inline-block
+			border: 20px solid transparent
+			border-left: 10px solid #f7f7f7
+			border-right: 0
+			margin-right: -10px
+		&:hover 
+			color: $text-color
+			background: #d5dde9
+			text-decoration: none
+		&:hover:before
+			border-top-color: #d5dde9
+			border-bottom-color: #d5dde9
+		&:hover:after
+			border-left-color: #d5dde9
+		&:active
+			background: $link-color
+			color: #f7f7f7
+		&:active:before
+			border-top-color: $link-color
+			border-bottom-color: $link-color
+		&:active:after
+			border-left-color: $link-color
+	&__active
+		background: $link-color
+		color: #f7f7f7
+		&:before
+			border-top-color: $link-color
+			border-bottom-color: $link-color
+		&:after
+			border-left-color: $link-color
+		&:hover
+			background: $link-color
+			color: #f7f7f7
+		&:hover:before
+			border-top-color: $link-color
+			border-bottom-color: $link-color
+		&:hover:after
+			border-left-color: $link-color

@@ -1,0 +1,55 @@
+.footer
+	background: url('../img/bg/footer_pattern.png') #653e96
+	min-height: 238px
+	&__logo-title
+		position: absolute
+		left: -9999px
+	&__wrap
+		min-height: 238px
+		display: flex
+		justify-content: space-between
+		align-items: center
+	&__nav
+		width: 485px
+		&-list
+			display: flex
+			justify-content: space-between
+		&-title
+			@extend .electra_bold
+			color: white
+			font-size: 15px
+			margin: 0 0 5px
+		&-link
+			@extend .electra_light
+			color: white
+			font-size: 15px
+			line-height: 25px
+			text-decoration: underline
+			&:hover
+				color: #fcc402
+	&__social
+		width: 198px
+		&-shops
+			margin-bottom: 26px
+			&_appstore, &_googlestore
+				width: 90px
+				height: 32px
+				display: inline-block
+				background: url('../img/icons/as.png')
+			&_googlestore
+				margin-left: 9px
+				background: url('../img/icons/gp.png')
+		&-item
+			float: left
+			margin-left: 11px
+			&:first-child
+				margin-left: 0
+		&-link
+			width: 44px
+			height: 44px
+			display: block
+			background: url('../img/icons/socials.png') 0 0 no-repeat
+			&_fb
+				background-position: -53px 0
+			&_tw
+				background-position: -104px 0
